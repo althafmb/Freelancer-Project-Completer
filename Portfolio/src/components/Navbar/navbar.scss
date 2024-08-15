@@ -1,0 +1,91 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+  padding: 0 1rem 0 6rem;
+  background-color: transparent;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    span {
+      font-weight: bold;
+    }
+
+    .myName {
+      display: none;
+
+      @include medium {
+        display: inherit;
+      }
+    }
+
+    .dropdown {
+      position: relative;
+      display: flex;
+      align-items: baseline;
+      height: 100%;
+      padding-top: 0.6rem;
+
+      button {
+        background-color: #ffa500;
+        border: none;
+        border-radius: 10px;
+        width: 180px;
+        font-weight: 500;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: all;
+        transition-duration: 300ms;
+        z-index: 2;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        white-space: nowrap;
+      }
+
+      .icon {
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+
+      .dropdownList {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: absolute;
+        bottom: -5.25rem;
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #666;
+        z-index: 99;
+
+        a {
+          font-weight: 700;
+          display: block;
+          padding: 0.5rem;
+          border-radius: 10px;
+          transition: all;
+          transition-duration: 500;
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+
+          &:hover {
+            background-color: #ffa50035 !important;
+          }
+        }
+      }
+    }
+  }
+}
